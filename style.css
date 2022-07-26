@@ -1,0 +1,35 @@
+body {
+    font-size: larger;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+ul {
+    list-style: circle outside;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.header h1 {
+    text-align: center;
+}
+
+li {
+    margin: 0.6em 0;
+    line-height: 1.2em;
+}
+
+.gray {
+    font-size: medium;
+    color: gray;
+}
