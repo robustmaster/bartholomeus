@@ -7,7 +7,7 @@ start = '''
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>uselessfrigid</title>
+    <title>keep.derda.sh</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,7 +27,6 @@ end = '''
 </html>
 <!doctype html>
 '''
-sample = '<li><a href="./htmls/entry.name">entry.name</a>'
 
 html_li_tags = ''
 with os.scandir('./htmls') as it:
