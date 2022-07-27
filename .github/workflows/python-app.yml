@@ -1,11 +1,12 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Python application
+name: Generate index.html
 
 on:
   push:
-    branches: [ "main" ]
+    paths:
+      - 'htmls/'
 
 jobs:
   build:
@@ -23,6 +24,6 @@ jobs:
         python create_html_index.py
         git config --global user.email "109269923+robustmaster@users.noreply.github.com"
         git config --global user.name "robustmaster"
-        git add ${{ github.workspace }}/index.html
+        git add .
         git commit -m 'generate index.html'
         git push
