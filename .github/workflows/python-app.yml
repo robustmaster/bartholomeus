@@ -6,7 +6,7 @@ name: Generate index.html
 on:
   push:
     paths:
-      - 'htmls/'
+      - 'htmls/**'
 
 jobs:
   build:
