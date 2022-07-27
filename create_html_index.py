@@ -31,12 +31,13 @@ end = '''
 html_li_tags = ''
 with os.scandir('./htmls') as it:
     files = list(it)
-    files.sort(key=lambda x: x.stat().st_mtime, reverse=True)
+    files.sort(key=lambda x: x.name, reverse=True)
     for entry in files:
         if not entry.name.startswith('.') and entry.is_file() and entry.name.endswith('.html'):
-            entry_created_datetime = datetime.fromtimestamp(int(entry.stat().st_mtime))
-            entry_created_time_string = entry_created_datetime.strftime('%Y-%m-%d')
-            html_li_tags += '        <li><span class="gray">' + entry_created_time_string + '</span>&nbsp;&nbsp;<a href="./htmls/' + entry.name + '">' + entry.name[:-5] + '</a></li>\n'
+            entry_keep_date = entry.name.split('.')[0]
+            entry_keep_date = entry_keep_date[:4] + '-' + entry_keep_date[4:6] + '-' + entry_keep_date[6:8]
+            entry_title = entry.name[16:][:-5]
+            html_li_tags += '<li><span class="gray">' + entry_keep_date + '</span>&nbsp;&nbsp;<a href="./htmls/' + entry.name + '">' + entry_title + '</a></li>\n'
 
 html_index = start + html_li_tags + end
 
