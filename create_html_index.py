@@ -7,13 +7,14 @@ start = '''
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>keep.derda.sh</title>
+    <title>一派胡言收藏夹</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
 <div class="header">
-    <h1>keep.derda.sh</h1>
+    <h1>一派胡言收藏夹</h1>
+    <p class="go-back" style="margin: 0 auto;text-align: center;"><a href="https://yipai.me" style="color: #cfcfcf;">返回一派胡言博客</a></p>
 </div>
 <div class="post-list">
     <ul>
